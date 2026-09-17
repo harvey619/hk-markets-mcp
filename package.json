@@ -1,0 +1,55 @@
+{
+  "name": "hk-markets-mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing Hong Kong Monetary Authority data as typed tools: the HKMA Base Rate, HIBOR fixings, and the USD/HKD peg band with the Aggregate Balance.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "test": "node --import tsx --test test/*.test.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "hong-kong",
+    "hkma",
+    "hibor",
+    "interest-rates",
+    "fintech",
+    "finance"
+  ],
+  "author": "Harvey Singh",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.3",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "bin": {
+    "hk-markets-mcp": "dist/index.js"
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harvey619/hk-markets-mcp.git"
+  },
+  "homepage": "https://github.com/harvey619/hk-markets-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/harvey619/hk-markets-mcp/issues"
+  }
+}
