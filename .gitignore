@@ -3,3 +3,6 @@ dist/
 *.tsbuildinfo
 .DS_Store
 .env
+
+# Never commit a registry token
+.npmrc
